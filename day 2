@@ -1,0 +1,76 @@
+control statements: 3 types
+
+Types of Control Statements:
+
+1. Decision-Making Statements
+
+if, if-else, else-if, nested if, switch
+
+2. Looping Statements
+
+for, while, do-while, enhanced for
+
+3. Jump Statements
+
+break, continue, return
+  << program on ifelse>>>
+  import java.util.*;
+public class ifelse{
+	public static void main(String args[]){
+		Scanner obj=new Scanner(System.in);
+		System.out.println("enter a number:");
+		int a=obj.nextInt();
+		if(a<=10){
+		System.out.println("condition is true");
+    }
+		else{
+			System.out.println("condition is false");
+			}
+}
+/*else-if ladder:syntax
+if condtion{
+	//block of code
+	}
+else if(condition 2){
+	//block of code
+	}
+else if(condition 3){
+	//block of code
+	}
+else if(condition 4){
+	//block of code
+	}
+else{
+	//block of code
+	}
+/*program on else-if ladder
+import java.util.*;
+public class gradecondition {
+    public static void main(String []args)
+    {
+        Scanner sc= new Scanner(System.in);
+        System.out.println("Enter the marks:");
+        int m=sc.nextInt();
+       if(m> 80 && m<=100){
+        System.out.println("Student passed with the distinction Grade A");
+       }
+        else if(m> 60&& m<=80){
+        System.out.println("Student secured the grade B");
+       }
+       else if(m>40 && m<=60){
+        System.out.println("Studnet secured the grade C");
+       }
+       else{
+        System.out.println("Studnet failed");
+       }
+    }
+    
+}
+<<nested if>>
+if condition 1{
+  if condition2{
+      \\block of code statement
+          }
+          \\code
+
+  
