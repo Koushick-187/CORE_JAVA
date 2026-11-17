@@ -1,0 +1,87 @@
+founder of java-> James Gosling
+first project -> oak tree (satellite project)
+1991 -> Green Project -James Gosling and a small team at sun microsystems explore  software for consumer devices  
+1991 -> Named Oak 
+1992 -> Star7Demo 
+1995 -> Renamed Java 
+1996 -> JDK 1.0 - First official (January 1996)- java goes mainstream 
+
+JAVA 1.0 -> JAN 1996  - JVM , core libraries, applets-"Write once , RUN anywhere" 
+JAVA 8 (LTS)- lambdas, Stream API , new date/time API(APllication Programming Interface)
+JAVA 11(sep 2018) - First LTS of the 6 month , standard HTTP client
+Present Latest version of JAVA is  - JAVA SE 27 
+
+Mandatory Syntax Rules
+
+• Declare the data type first. Every variable needs a type before its name (e.g., int age = 25;).
+• Allowed characters. Names can only contain letters, digits, underscores (_), and dollar signs ($).
+• Starting character. Names must start with a letter, _, or $—never a digit (1num is invalid).
+• No spaces. Variable names cannot contain blank spaces (my age is invalid).
+• No reserved keywords. You cannot use Java keywords like int, class, public, or void as variable names.
+• Case-sensitive. age and Age are treated as two completely different variables.
+
+Standard Naming Conventions (Best Practices)
+
+• Use camelCase. Start with a lowercase letter and capitalize subsequent words (e.g., studentName, totalAmount).
+• Constants in UPPER_CASE. Use all caps with underscores for final constant variables (e.g., final int MAX_SPEED = 120;).
+method explanation
+Scanner method      example          return type
+nextInt()            25              int
+nextLong()           987654321L      long
+nextFloat()          85.5f           float
+nextDouble()         25000.75        double
+nextLine()           Hello Java      String
+next()               vardhan         String
+next().charAt()      A               Char
+nextBoolean()        true            Boolean
+/*sample program on data types
+import java.util.*;
+	class Demo{
+		public static void main(String []args)
+		{
+				Scanner sc= new Scanner(System.in);
+				System.out.println("Enter the Employee details:");
+				String employee_name;
+				int age;
+				long salary;
+				float average;
+				double total;
+				System.out.println("Enter the age:");
+				age=sc.nextInt();
+				System.out.println("Enter the salary:");
+				salary=sc.nextLong();
+				System.out.println("Enter the average:");
+				average=sc.nextFloat();
+				System.out.println("Enter the total:");
+				total=sc.nextDouble();
+				System.out.println("Age is:"+age);
+				System.out.println("Salary is:"+salary);
+				System.out.println("Average is:"+average);
+				System.out.println("Total is:" +total);
+	}
+}
+OPERATERS ON JAVA
+/*arthmetic operaters
++ , - , * , / ,%
+/*sample program arthmetic operaters
+import java.util.*;
+	class arth{
+		public static void main(String []args){
+		Scanner sc=new Scanner(System.in);
+		int cash,tiffin,dinner,total_expen;
+		float avgOfWeek;
+		System.out.println("enter cash");
+		cash=sc.nextInt();
+		System.out.println("enter tiffin amount");
+		tiffin=sc.nextInt();
+		System.out.println("enter dinner amount");
+		dinner=sc.nextInt();
+		total_expen=dinner+tiffin;
+		System.out.println("total expensive is:"+total_expen);
+		avgOfWeek=total_expen/7;
+		System.out.println("average of week expensive is:"+avgOfWeek);
+		}
+	}
+		
+		
+		
