@@ -211,5 +211,49 @@ public class switch2{
 
     }
 }
+<<tables>>
+import java.util.*;
+class Tables{
+public static void main(String[] args){
+Scanner sc=new Scanner(System.in);
+
+for(int i=1;i<=40;i++)
+{
+System.out.println("table"+i+"started");
+for(int j=1;j<=10;j++)
+{
+System.out.println(i+"*"+j+"="+i*j);
+}
+System.out.println("table"+i+"ended");
+
+System.out.println();
+}
+}
+}
+<<grade>>
+import java.util.*;
+public class gradecondition {
+    public static void main(String []args)
+    {
+        Scanner sc= new Scanner(System.in);
+        System.out.println("Enter the marks:");
+        int m=sc.nextInt();
+       if(m> 80 && m<=100){
+        System.out.println("Student passed with the distinction Grade A");
+       }
+        else if(m> 60&& m<=80){
+        System.out.println("Student secured the grade B");
+       }
+       else if(m>40 && m<=60){
+        System.out.println("Studnet secured the grade C");
+       }
+       else{
+        System.out.println("Studnet failed");
+       }
+    }
+    
+}
+<<weekdays>>
+
     
         
