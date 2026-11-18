@@ -1,10 +1,11 @@
-control statements: 3 types
+----------------------control statements-----------------
+  control statements: 3 types
 
 Types of Control Statements:
 
 1. Decision-Making Statements
 
-if, if-else, else-if, nested if, switch
+if, if-else, else-if(ladder), nested if, switch
 
 2. Looping Statements
 
@@ -13,85 +14,150 @@ for, while, do-while, enhanced for
 3. Jump Statements
 
 break, continue, return
-  << program on ifelse>>>
-  import java.util.*;
-public class ifelse{
-	public static void main(String args[]){
-		Scanner obj=new Scanner(System.in);
-		System.out.println("enter a number:");
-		int a=obj.nextInt();
-		if(a<=10){
-		System.out.println("condition is true");
-    }
-		else{
-			System.out.println("condition is false");
-			}
-}
-/*else-if ladder:syntax
-if condtion{
-	//block of code
-	}
-else if(condition 2){
-	//block of code
-	}
-else if(condition 3){
-	//block of code
-	}
-else if(condition 4){
-	//block of code
-	}
-else{
-	//block of code
-	}
-/*program on else-if ladder
-import java.util.*;
-public class gradecondition {
-    public static void main(String []args)
-    {
-        Scanner sc= new Scanner(System.in);
-        System.out.println("Enter the marks:");
-        int m=sc.nextInt();
-       if(m> 80 && m<=100){
-        System.out.println("Student passed with the distinction Grade A");
-       }
-        else if(m> 60&& m<=80){
-        System.out.println("Student secured the grade B");
-       }
-       else if(m>40 && m<=60){
-        System.out.println("Studnet secured the grade C");
-       }
-       else{
-        System.out.println("Studnet failed");
-       }
-    }
-    
-}
-<<nested if>>
-if condition 1{
-  if condition2{
-      \\block of code statement
-          }
-          \\code
-<<<<<program on nested if>>>>
-import java.util.*;
-class nestedif{
-public static void main(String args[])
-{
-	Scanner obj=new Scanner(System.in);
-	int value1;
-	System.out.println("enetr number:");
-	value1=obj.nextInt();
-	if(value1>=20){
-		if(value1>20)
-		System.out.println("condtion2");}
+# For Each Loop in Java||enhanced for
+The for-each loop in Java is used to access each element of an array or collection one by one without using an index.
 
-	}
+It is also called an Enhanced For Loop.
+Syntax
+for(dataType variable : arrayName) {
+    // statements
 }
-<<program on switch>>
-on dept
+--------------------switch--------------
+  
 import java.util.Scanner;
 
-public class Main {
+class Main {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        int a, b, choice;
+
+        System.out.print("Enter first number: ");
+        a = sc.nextInt();
+
+        System.out.print("Enter second number: ");
+        b = sc.nextInt();
+
+        System.out.println("\n1. Addition");
+        System.out.println("2. Subtraction");
+        System.out.println("3. Multiplication");
+        System.out.println("4. Division");
+
+        System.out.print("Enter your choice: ");
+        choice = sc.nextInt();
+
+        switch(choice) {
+
+            case 1:
+                System.out.println("Addition = " + (a + b));
+                break;
+
+            case 2:
+                System.out.println("Subtraction = " + (a - b));
+                break;
+
+            case 3:
+                System.out.println("Multiplication = " + (a * b));
+                break;
+
+            case 4:
+                if(b != 0) {
+                    System.out.println("Division = " + (a / (double)b));
+                } else {
+                    System.out.println("Cannot divide by zero");
+                }
+                break;
+
+            default:
+                System.out.println("Invalid choice");
+        }
+
+        sc.close();
+    }
+}
+------------------------else-if--------nested if---------
+import java.util.Scanner;
+class Ranking{
+public static void main(String[] args){
+Scanner sc =new Scanner(System.in);
+int marks=sc.nextInt();
+//else if
+if(marks>90)
+{
+System.out.println("a");
+}
+else if(marks>80)
+{
+System.out.println("b");
+}
+else if(marks>70)
+{
+System.out.println("c");
+}
+else
+{
+System.out.println("d");
+}
+//nested if
+if(marks<70)
+{
+if(marks>50)
+{
+System.out.println("border pass");
+}
+}
+}
+}
+------------------------
+
+SYNTAX:
+Syntax means the rules or structure used to write a program correctly in a programming language.
+
+In simple words, syntax is the correct way of writing code.
+-------------------arthamatic calculator-----------------
+using switch
+import java.util.Scanner;
+
+public class Calculator {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+int a=5;
+int b=10;
+
+        System.out.println("----- Calculator-----");
+        System.out.println("1. add");
+        System.out.println("2. sub");
+        System.out.println("3. mul");
+        System.out.println("4. div");
+        System.out.println("5. %div");
+        int num=sc.nextInt();
+switch(num){
+case 1:
+System.out.println(a+b);
+break;
+case 2:
+System.out.println(a-b);
+break;
+case 3:
+System.out.println(a*b);
+break;
+case 4:
+System.out.println(a/b);
+break;
+case 5:
+System.out.println(a%b);
+break;
+default:
+System.out.println("enter the valid number");
+}
+}
+}
+-------------------college departments using switch------------
+import java.util.Scanner;
+
+public class College {
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
@@ -151,143 +217,145 @@ public class Main {
                 break;
 
             case 9:
-                System.out.println("Computer Science and Engineering (Cyber Security)");
+                System.out.println("Cyber Security");
                 break;
 
             case 10:
-                System.out.println("Computer Science and Engineering (Data Science)");
-                break;
-
-            case 11:
-                System.out.println("Biotechnology Engineering");
-                break;
-
-            case 12:
-                System.out.println("Chemical Engineering");
-                break;
-
-            case 13:
-                System.out.println("Automobile Engineering");
-                break;
-
-            case 14:
-                System.out.println("Aeronautical Engineering");
-                break;
-
-            case 15:
-                System.out.println("Mining Engineering");
+                System.out.println("Data Science");
                 break;
 
             default:
-                System.out.println("Invalid Department Number");
+                System.out.println("Department is available in our college list, but not assigned to a case.");
         }
 
         sc.close();
     }
 }
-<<<calander>>>
-import java.util.Scanner;
-public class switch2{
-    public static void main(String []args)
-    {
-	Scanner sc=new Scanner(System.in);
-	System.out.println("enter day:");
-        int day=sc.nextInt();
-        switch(day){
-        case 1:
-            System.out.println("Today is monday");
-            break;
-        case 2:
-            System.out.println("Today is Tuesday");
-            break;
-        case 3:
-            System.out.println("Today is wednesday");
-            break;
+--------------------------calander-----------------------
+public class datatypes {
+    public static void main(String[] args) {
+        int month = 1;
+        int days = 0;
+        int startDay = 4;
+        while (month <= 12) {
+            switch(month) {
+                case 1: 
+                    days = 31; 
+                    break;
+                case 2: 
+                    days = 28; 
+                    break;
+                case 3: 
+                    days = 31; 
+                    break;
+                case 4: 
+                    days = 30; 
+                    break;
+                case 5: 
+                    days = 31; 
+                    break;
+                case 6: 
+                    days = 30; 
+                    break;
+                case 7: 
+                    days = 31; 
+                    break;
+                case 8: 
+                    days = 31; 
+                    break;
+                case 9: 
+                    days = 30; 
+                    break;
+                case 10: 
+                    days = 31; 
+                    break;
+                case 11: 
+                    days = 30; 
+                    break;
+                case 12: 
+                    days = 31; 
+                    break;
+            }
 
-        default:
-            System.out.println("Enter the input in integer format");
-            break;
+            switch (month) {
+                case 1: 
+                System.out.println("\n       JANUARY 2026"); 
+                    break;
+                case 2: 
+                    System.out.println("\n      FEBRUARY 2026"); 
+                    break;
+                case 3: 
+                    System.out.println("\n        MARCH 2026"); 
+                    break;
+                case 4: 
+                    System.out.println("\n        APRIL 2026"); 
+                    break;
+                case 5: 
+                    System.out.println("\n         MAY 2026"); 
+                    break;
+                case 6: 
+                    System.out.println("\n         JUNE 2026"); 
+                    break;
+                case 7: 
+                    System.out.println("\n         JULY 2026"); 
+                    break;
+                case 8: 
+                    System.out.println("\n        AUGUST 2026"); 
+                    break;
+                case 9: 
+                    System.out.println("\n      SEPTEMBER 2026"); 
+                    break;
+                case 10: 
+                    System.out.println("\n       OCTOBER 2026"); 
+                    break;
+                case 11: 
+                    System.out.println("\n      NOVEMBER 2026"); 
+                    break;
+                case 12: 
+                    System.out.println("\n      DECEMBER 2026"); 
+                    break;
+            }
+
+            System.out.println("Sun Mon Tue Wed Thu Fri Sat");
+
+            switch (startDay) {
+                case 0: 
+                    break;
+                case 1: 
+                    System.out.print("    "); 
+                    break;
+                case 2: 
+                    System.out.print("        "); 
+                    break;
+                case 3: 
+                    System.out.print("            "); 
+                    break;
+                case 4: 
+                    System.out.print("                "); 
+                    break;
+                case 5: 
+                    System.out.print("                    "); 
+                case 6: System.out.print("                        "); break;
+            }
+
+            int day = 1;
+
+            while (day <= days) {
+
+                System.out.printf("%3d ", day);
+
+                if ((startDay + day) % 7 == 0) {
+                    System.out.println();
+                }
+
+                day++;
+            }
+
+            System.out.println();
+
+            startDay = (startDay + days) % 7;
+
+            month++;
         }
-
     }
 }
-<<tables>>
-import java.util.*;
-class Tables{
-public static void main(String[] args){
-Scanner sc=new Scanner(System.in);
-
-for(int i=1;i<=40;i++)
-{
-System.out.println("table"+i+"started");
-for(int j=1;j<=10;j++)
-{
-System.out.println(i+"*"+j+"="+i*j);
-}
-System.out.println("table"+i+"ended");
-
-System.out.println();
-}
-}
-}
-<<grade>>
-import java.util.*;
-public class gradecondition {
-    public static void main(String []args)
-    {
-        Scanner sc= new Scanner(System.in);
-        System.out.println("Enter the marks:");
-        int m=sc.nextInt();
-       if(m> 80 && m<=100){
-        System.out.println("Student passed with the distinction Grade A");
-       }
-        else if(m> 60&& m<=80){
-        System.out.println("Student secured the grade B");
-       }
-       else if(m>40 && m<=60){
-        System.out.println("Studnet secured the grade C");
-       }
-       else{
-        System.out.println("Studnet failed");
-       }
-    }
-    
-}
-<<<even and odd tables>>>
-import java.util.*;
-class Tables{
-public static void main(String[] args){
-Scanner sc=new Scanner(System.in);
-
-for(int i=1;i<=40;i++)
-{
-if(i%2==0)
-{
-System.out.println("even tables");
-}
-else
-{
-System.out.println("odd tables");
-}
-
-System.out.println("table"+i+"started");
-for(int j=1;j<=10;j++)
-{
-System.out.println(i+"*"+j+"="+i*j);
-}
-System.out.println("table"+i+"ended");
-
-System.out.println();
-
-
-
-}
-}
-}
-<<<pattern>>
-
-
-
-
-    
-        
